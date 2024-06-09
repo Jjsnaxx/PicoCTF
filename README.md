@@ -8,4 +8,4 @@ It talks about a group of uni students competing at the highest level and attain
 Here are just some of the practice challenges I had completed in PicoGym:
 
 - [Obedient Cat](https://github.com/Jjsnaxx/PicoCTF/blob/main/ObedientCat)
-- [Python Wrangling](
+- [Python Wrangling](https://github.com/Jjsnaxx/PicoCTF/blob/main/Python%20Wrangling)

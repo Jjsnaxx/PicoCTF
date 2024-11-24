@@ -13,7 +13,9 @@ Actions:
 - I fired up the instance and logged in using the credentials provided.
 
 Webshell
+
 --------------------------------------------------------------------------------------
+
 Strain3d-picoctf@webshell:~$ ssh -p 57506 ctf-player@rhea.picoctf.net
 
 The authenticity of host '[rhea.picoctf.net]:57506 ([3.136.191.228]:57506)' can't be established.
@@ -39,46 +41,69 @@ individual files in /usr/share/doc/*/copyright.
 
 Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
 applicable law.
+
 --------------------------------------------------------------------------------------
+
 ctf-player@pico-chall$ ls
 checksum.txt  decrypt.sh  files
+
 --------------------------------------------------------------------------------------
+
 Actions:
 - We have a text file, a shell script and a directory called /files
 - I run decrypt.sh against the text file to see what happens.
+
 --------------------------------------------------------------------------------------
+
 ctf-player@pico-chall$ ./decrypt.sh checksum.txt 
 bad magic number
 Error: Failed to decrypt 'checksum.txt'. This flag is fake! Keep looking!
+
 --------------------------------------------------------------------------------------
+
 Actions:
 - Looks like its no good. I decide to run the script against the directory /files
+
+
 --------------------------------------------------------------------------------------
+
 ctf-player@pico-chall$ ./decrypt.sh files/*
 bad magic number
 Error: Failed to decrypt 'files/0QFPjDGl'. This flag is fake! Keep looking!
+
 --------------------------------------------------------------------------------------
+
 Actions:
 - Looks like its no good either.
 - I decide to run the entire /files directory through sha256sum and see if i can match the hashes.
+
 --------------------------------------------------------------------------------------
+
 ctf-player@pico-chall$ sha256sum files/*
 914eb674c3c0625ac3d0d229d3df05e3a1e74815dbc5ec1ed72ff7f07569a6b9  files/0QFPjDGl
 c4cacb221571c4f813be56056fc0f00a244a9664ed3a7223b6bc543433984c44  files/0wKPM7Vk
 b52f46a38b72d550c15366ba1345d304449a4f46b2011c57b0858e959d9ea46b  files/10tptfxh
 2a077817bad18787db2847c600e722b90b50ad529e3eb6734065d94f9be4c9c3  files/119zBIIk
 ..............
+
 --------------------------------------------------------------------------------------
+
 Actions:
 - The output is huge so I use grep to find the correct checksum.
+
 --------------------------------------------------------------------------------------
+
 ctf-player@pico-chall$ sha256sum files/* | grep b09c99c555e2b39a7e97849181e8996bc6a62501f0149c32447d8e65e205d6d2
 b09c99c555e2b39a7e97849181e8996bc6a62501f0149c32447d8e65e205d6d2  files/451fd69b
+
 --------------------------------------------------------------------------------------
+
 Actions:
 - Finally. I found the file with a matching hash.
 - I run the decrypt.sh script against this file.
+
 --------------------------------------------------------------------------------------
+
 ctf-player@pico-chall$ ./decrypt.sh files/451fd69b
 
 Flag: picoCTF{trust_but_verify_451fd69b}

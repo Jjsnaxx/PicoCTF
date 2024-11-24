@@ -2,15 +2,17 @@
 
 Python Wrangling
 
+Description:
 Python scripts are invoked kind of like programs in the Terminal... Can you run this Python script using this password to get the flag?
 
+Files provided:
 Script Name: ende.py
 Password text file: pw.txt
 Encrypted Flag: flag.txt.en
 
-
-	- Download the python script, password text file and the encrypted flag file to the webshell.
-	- First thing I did was have a quick peek into the python file using 'cat ende.py' to see how it worked
+Actions:
+- Downloaded the python script, password text file and the encrypted flag file to the webshell.
+- Next thing I did was have a quick peek into the python file using 'cat ende.py' to see how it worked
 
 ------------------------------------------
 
@@ -70,9 +72,10 @@ else:
 
 --------------------------------------------------------------------
 
-	- From the looks of it, the script can be used to encrypt and decrypt a file. Lets try use it to decrypt our flag.
-	- "python3 ende.py -d flag.txt.en"
-	- It will then prompt for a password, which can be found in our pw.txt file
-	- Once we put in the password we receive our flag.
+Actions:
+- From the looks of it, the script can be used to encrypt and decrypt a file. Lets try use it to decrypt our flag.
+- "python3 ende.py -d flag.txt.en"
+- It will then prompt for a password, which can be found in our pw.txt file
+- Once we put in the password we receive our flag.
 
 Flag: picoCTF{4p0110_1n_7h3_h0us3_6008014f}

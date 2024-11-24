@@ -4,5 +4,43 @@ Verify
 
 Description:
 People keep trying to trick my players with imitation flags. I want to make sure they get the real thing! I'm going to provide the SHA-256 hash and a decrypt script to help you know that my flags are legitimate.
-Additional details will be available after launching your challenge instance.
+ssh -p 57506 ctf-player@rhea.picoctf.net
+Using the password 6abf4a82. Accept the fingerprint with yes, and ls once connected to begin. Remember, in a shell, passwords are hidden!
+Checksum: b09c99c555e2b39a7e97849181e8996bc6a62501f0149c32447d8e65e205d6d2
+To decrypt the file once you've verified the hash, run ./decrypt.sh files/<file>.
 
+Actions:
+- I fired up the instance and logged in using the credentials provided.
+- 
+
+Webshell
+--------------------------------------------------------------------------------------
+Strain3d-picoctf@webshell:~$ ssh -p 57506 ctf-player@rhea.picoctf.net
+
+The authenticity of host '[rhea.picoctf.net]:57506 ([3.136.191.228]:57506)' can't be established.
+ED25519 key fingerprint is SHA256:QKdv+RGJL0UYRDM66IiGQ5dsXOX7DQFqB7umTylh+IU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[rhea.picoctf.net]:57506' (ED25519) to the list of known hosts.
+ctf-player@rhea.picoctf.net's password: 
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 6.5.0-1016-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+--------------------------------------------------------------------------------------
+ctf-player@pico-chall$ ls
+checksum.txt  decrypt.sh  files
+--------------------------------------------------------------------------------------

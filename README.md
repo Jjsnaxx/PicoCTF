@@ -9,3 +9,4 @@ Here are just some of the practice challenges I had completed in PicoGym:
 
 - [Obedient Cat](https://github.com/Jjsnaxx/PicoCTF/blob/main/ObedientCat)
 - [Python Wrangling](https://github.com/Jjsnaxx/PicoCTF/blob/main/Python%20Wrangling)
+- [Verify](https://github.com/Jjsnaxx/PicoCTF/blob/main/Verify)

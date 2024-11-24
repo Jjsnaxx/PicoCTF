@@ -1,4 +1,4 @@
-## General Skills
+##General Skills
 
 Python Wrangling
 
@@ -14,10 +14,12 @@ Actions:
 - Downloaded the python script, password text file and the encrypted flag file to the webshell.
 - Next thing I did was have a quick peek into the python file using 'cat ende.py' to see how it worked
 
+Webshell
 ------------------------------------------
 
 jjsnaxx-picoctf@webshell:~$ cat ende.py
 
+------------------------------------------
 import sys
 import base64
 from cryptography.fernet import Fernet

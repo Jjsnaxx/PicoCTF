@@ -1,11 +1,13 @@
 ## General Skills
 
-Obedient Cat
+Title: Obedient Cat
 
+Description:
 This file has a flag in plain sight (aka "in-the-clear"). Download flag.
 
-	- Download the file onto my webshell by using "wget https://mercury.picoctf.net/static/2d24d50b4ebed90c704575627f1f57b2/flag"
-	- Since it’s a JPG file we can use exiftool to find more information
+Actions:
+- Downloaded the file onto my webshell by using "wget https://mercury.picoctf.net/static/2d24d50b4ebed90c704575627f1f57b2/flag"
+- Since it’s a JPG file we can use exiftool to find more information
 
 --------------------------------------------------------------	
 ExifTool Version Number         : 12.40
@@ -39,7 +41,8 @@ Image Size                      : 2560x1598
 Megapixels                      : 4.1
 -------------------------------------------------------------------------------
 
-	- Under License we see some unusual text that looks a little out of place, I decide to see if it can be decoded.
-	- I throw it into Cyber Chef and decode from Base64 and aha! 
+Actions:
+- Under License we see some unusual text that looks a little out of place, I decide to see if it can be decoded.
+- I throw it into Cyber Chef and decode from Base64 and aha! 
 
 Flag: picoCTF{the_m3tadata_1s_modified}

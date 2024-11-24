@@ -1,4 +1,4 @@
-## General Skills
+##General Skills
 
 Obedient Cat
 
@@ -9,6 +9,7 @@ Actions:
 - Downloaded the file onto my webshell by using "wget https://mercury.picoctf.net/static/2d24d50b4ebed90c704575627f1f57b2/flag"
 - Since it’s a JPG file we can use exiftool to find more information
 
+Webshell
 --------------------------------------------------------------	
 ExifTool Version Number         : 12.40
 File Name                       : cat.jpg

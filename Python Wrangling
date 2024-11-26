@@ -21,6 +21,7 @@ Webshell
 jjsnaxx-picoctf@webshell:~$ cat ende.py
 
 ------------------------------------------
+
 import sys
 import base64
 from cryptography.fernet import Fernet

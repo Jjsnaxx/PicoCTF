@@ -13,3 +13,4 @@ Here are just some of the practice challenges I had completed in PicoGym:
 - [Python Wrangling](https://github.com/Jjsnaxx/PicoCTF/blob/main/Python%20Wrangling)
 - [Verify](https://github.com/Jjsnaxx/PicoCTF/blob/main/Verify)
 - [Secret of the Polygot](https://github.com/Jjsnaxx/PicoCTF/blob/main/Secret%20of%20the%20Polygot)
+- [First Find](

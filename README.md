@@ -5,6 +5,8 @@ It talks about a group of uni students competing at the highest level and attain
 
 <img src="https://i.imgur.com/WlpTYwl.jpeg" height="80%" width="80%" alt="after.jpg"/>
 
+Username: Strain3d
+
 Here are just some of the practice challenges I had completed in PicoGym:
 
 - [Obedient Cat](https://github.com/Jjsnaxx/PicoCTF/blob/main/ObedientCat)

@@ -26,6 +26,7 @@ files.zip                                       100%[===========================
 
 Strain3d-picoctf@webshell:~/files$ ls
 files.zip
+
 Strain3d-picoctf@webshell:~/files$ unzip files.zip 
 Archive:  files.zip
    creating: files/
@@ -50,6 +51,7 @@ Archive:  files.zip
   inflating: files/acceptable_books/17880.txt.utf-8  
   inflating: files/acceptable_books/17879.txt.utf-8  
   inflating: files/14789.txt.utf-8   
+
 Strain3d-picoctf@webshell:~/files$ ls
 files  files.zip
 

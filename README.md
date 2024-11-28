@@ -13,7 +13,7 @@ Here are just some of the practice challenges I had completed in PicoGym:
 
 - [Obedient Cat](https://github.com/Jjsnaxx/PicoCTF/blob/main/ObedientCat)
 - [Python Wrangling](https://github.com/Jjsnaxx/PicoCTF/blob/main/Python%20Wrangling)
-- [First Find](https://github.com/Jjsnaxx/PicoCTF/tree/main)
+- [First Find](https://github.com/Jjsnaxx/PicoCTF/blob/main/First%20Find)
 - [Commitment Issues](https://github.com/Jjsnaxx/PicoCTF/blob/main/Commitment%20Issues)
 
 <h3>Forensics:</h3>

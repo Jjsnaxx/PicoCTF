@@ -1,0 +1,185 @@
+##General Skills
+
+Description:
+I accidentally wrote the flag down. Good thing I deleted it!
+You download the challenge files here:
+challenge.zip
+
+Actions:
+- Downloaded the zip file to the Webshell.
+- Unzipped the file.
+
+Webshell
+
+-----------------------------------------------------------------
+
+Strain3d-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c_titan/77/challenge.zip
+--2024-11-28 16:06:43--  https://artifacts.picoctf.net/c_titan/77/challenge.zip
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 3.160.22.128, 3.160.22.43, 3.160.22.92, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|3.160.22.128|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 19199 (19K) [application/octet-stream]
+Saving to: 'challenge.zip.1'
+
+challenge.zip.1         100%[============================>]  18.75K  --.-KB/s    in 0.008s  
+
+2024-11-28 16:06:44 (2.44 MB/s) - 'challenge.zip.1' saved [19199/19199]
+
+Strain3d-picoctf@webshell:~$ ls
+README.txt  challenge.zip  challenge.zip.1  drop-in
+
+Strain3d-picoctf@webshell:~$ unzip challenge.zip 
+Archive:  challenge.zip
+   creating: drop-in/
+   creating: drop-in/.git/
+   creating: drop-in/.git/branches/
+  inflating: drop-in/.git/description  
+   creating: drop-in/.git/hooks/
+  inflating: drop-in/.git/hooks/applypatch-msg.sample  
+  inflating: drop-in/.git/hooks/commit-msg.sample  
+  inflating: drop-in/.git/hooks/fsmonitor-watchman.sample  
+  inflating: drop-in/.git/hooks/post-update.sample  
+  inflating: drop-in/.git/hooks/pre-applypatch.sample  
+  inflating: drop-in/.git/hooks/pre-commit.sample  
+  inflating: drop-in/.git/hooks/pre-merge-commit.sample  
+  inflating: drop-in/.git/hooks/pre-push.sample  
+  inflating: drop-in/.git/hooks/pre-rebase.sample  
+  inflating: drop-in/.git/hooks/pre-receive.sample  
+  inflating: drop-in/.git/hooks/prepare-commit-msg.sample  
+  inflating: drop-in/.git/hooks/update.sample  
+   creating: drop-in/.git/info/
+  inflating: drop-in/.git/info/exclude  
+   creating: drop-in/.git/refs/
+   creating: drop-in/.git/refs/heads/
+ extracting: drop-in/.git/refs/heads/master  
+   creating: drop-in/.git/refs/tags/
+ extracting: drop-in/.git/HEAD       
+  inflating: drop-in/.git/config     
+   creating: drop-in/.git/objects/
+   creating: drop-in/.git/objects/pack/
+   creating: drop-in/.git/objects/info/
+   creating: drop-in/.git/objects/96/
+ extracting: drop-in/.git/objects/96/f7309de67d785ec0b93b8766ff2882bef5c3ef  
+   creating: drop-in/.git/objects/8c/
+ extracting: drop-in/.git/objects/8c/1d254e2da6713e33acd6d622fc1dae357ec3c6  
+   creating: drop-in/.git/objects/3d/
+ extracting: drop-in/.git/objects/3d/5ec8a26ee7b092a1760fea18f384c35e435139  
+   creating: drop-in/.git/objects/d5/
+ extracting: drop-in/.git/objects/d5/52d1ecd2d83fa2e65b6724d1ff73b45a7d59b7  
+   creating: drop-in/.git/objects/0c/
+ extracting: drop-in/.git/objects/0c/1ab266b7a3a1cd099bb509f82b7a2d03aecd03  
+   creating: drop-in/.git/objects/e1/
+ extracting: drop-in/.git/objects/e1/237df82d2e69f62dd53279abc1c8aeb66f6d64  
+  inflating: drop-in/.git/index      
+ extracting: drop-in/.git/COMMIT_EDITMSG  
+   creating: drop-in/.git/logs/
+  inflating: drop-in/.git/logs/HEAD  
+   creating: drop-in/.git/logs/refs/
+   creating: drop-in/.git/logs/refs/heads/
+  inflating: drop-in/.git/logs/refs/heads/master  
+ extracting: drop-in/message.txt      
+
+-----------------------------------------------------------------
+
+Actions:
+- Read the documentation provided by PicoPrimer (https://primer.picoctf.org/#_git_version_control)
+- Initialised git to start "tracking".
+
+-----------------------------------------------------------------
+
+Strain3d-picoctf@webshell:~$ git init
+
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/Strain3d-picoctf/.git/
+
+-----------------------------------------------------------------
+
+Actions:
+- Listed out directories. I saw there was a new directory called 'drop-in'.
+- Changed directory to /drop-in.
+- Listed out directory. Found a text file name "message.txt". 
+- Opened and took a look at "message.txt".
+
+-----------------------------------------------------------------
+
+Strain3d-picoctf@webshell:~$ cd drop-in/
+
+Strain3d-picoctf@webshell:~/drop-in$ ls
+message.txt
+
+Strain3d-picoctf@webshell:~/drop-in$ cat message.txt 
+TOP SECRET
+
+-----------------------------------------------------------------
+
+Actions:
+- File isn't showing anything useful so I read up on the PicoPrimer documentation.
+- I take a look at the log history.
+
+-----------------------------------------------------------------
+
+Strain3d-picoctf@webshell:~/drop-in$ git log
+
+commit e1237df82d2e69f62dd53279abc1c8aeb66f6d64 (HEAD -> master)
+Author: picoCTF <ops@picoctf.com>
+Date:   Sat Mar 9 21:10:14 2024 +0000
+
+    remove sensitive info
+
+commit 3d5ec8a26ee7b092a1760fea18f384c35e435139
+Author: picoCTF <ops@picoctf.com>
+Date:   Sat Mar 9 21:10:14 2024 +0000
+
+    create flag
+(END)
+
+-----------------------------------------------------------------
+
+Actions:
+- Looks like theres a commit ID hinting towards the flag created.
+- I open up the committ ID and take a look.
+
+-----------------------------------------------------------------
+
+Strain3d-picoctf@webshell:~/drop-in$ git commit 3d5ec8a26ee7b092a1760fea18f384c35e435139
+error: pathspec '3d5ec8a26ee7b092a1760fea18f384c35e435139' did not match any file(s) known to git
+
+Strain3d-picoctf@webshell:~/drop-in$ ls
+message.txt
+
+Strain3d-picoctf@webshell:~/drop-in$ cat message.txt 
+TOP SECRET
+
+-----------------------------------------------------------------
+
+Actions:
+- It's still not revealing the flag.
+- This time checkout both ID's provided
+
+-----------------------------------------------------------------
+
+Strain3d-picoctf@webshell:~/drop-in$ git checkout e1237df82d2e69f62dd53279abc1c8aeb66f6d64
+HEAD is now at e1237df remove sensitive info
+
+Strain3d-picoctf@webshell:~/drop-in$ git checkout 3d5ec8a26ee7b092a1760fea18f384c35e435139
+Previous HEAD position was e1237df remove sensitive info
+HEAD is now at 3d5ec8a create flag
+
+Strain3d-picoctf@webshell:~/drop-in$ ls
+message.txt
+
+Strain3d-picoctf@webshell:~/drop-in$ cat message.txt 
+picoCTF{s@n1t1z3_30e86d36}
+
+-----------------------------------------------------------------
+
+Flag: picoCTF{s@n1t1z3_30e86d36}

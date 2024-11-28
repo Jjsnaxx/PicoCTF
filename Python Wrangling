@@ -18,9 +18,7 @@ Webshell
 
 ------------------------------------------
 
-jjsnaxx-picoctf@webshell:~$ cat ende.py
-
-------------------------------------------
+Strain3d-picoctf@webshell:~$ cat ende.py
 
 import sys
 import base64

@@ -15,7 +15,7 @@ Here are just some of the practice challenges I had completed in PicoGym:
 - [Python Wrangling](https://github.com/Jjsnaxx/PicoCTF/blob/main/Python%20Wrangling)
 - [First Find](https://github.com/Jjsnaxx/PicoCTF/blob/main/First%20Find)
 - [Commitment Issues](https://github.com/Jjsnaxx/PicoCTF/blob/main/Commitment%20Issues)
-- [Blame Game](https://github.com/Jjsnaxx/PicoCTF/blob/main/ObedientCat)
+- [Blame Game](https://github.com/Jjsnaxx/PicoCTF/blob/main/Blame%20Game)
 
 <h3>Forensics:</h3>
 

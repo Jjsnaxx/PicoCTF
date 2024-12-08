@@ -1,0 +1,78 @@
+##General Skills
+
+Blame Game
+
+Description:
+Someone's commits seems to be preventing the program from working. Who is it?
+You can download the challenge files here:
+challenge.zip
+
+Actions:
+- Downloaded the file onto my webshell.
+- Unzipped the file.
+- Changed to the /drop-in directory and had a look.
+
+Webshell
+
+-------------------------------------------------------------------------------	
+
+Strain3d-picoctf@webshell:~$ wget https://artifacts.picoctf.net/c_titan/159/challenge.zip
+--2024-12-08 16:49:44--  https://artifacts.picoctf.net/c_titan/159/challenge.zip
+Resolving artifacts.picoctf.net (artifacts.picoctf.net)... 3.160.22.128, 3.160.22.16, 3.160.22.43, ...
+Connecting to artifacts.picoctf.net (artifacts.picoctf.net)|3.160.22.128|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 293915 (287K) [application/octet-stream]
+Saving to: 'challenge.zip'
+
+challenge.zip           100%[============================>] 287.03K  --.-KB/s    in 0.1s    
+
+2024-12-08 16:49:44 (1.91 MB/s) - 'challenge.zip' saved [293915/293915]
+
+Strain3d-picoctf@webshell:~$ ls
+README.txt  challenge.zip
+
+Strain3d-picoctf@webshell:~$ unzip challenge.zip 
+Archive:  challenge.zip
+   creating: drop-in/
+..................
+
+Strain3d-picoctf@webshell:~$ ls
+README.txt  challenge.zip  drop-in
+
+Strain3d-picoctf@webshell:~$ cd drop-in/
+
+Strain3d-picoctf@webshell:~/drop-in$ ls
+message.py
+
+-------------------------------------------------------------------------------
+
+Actions:
+- Since its a python file, lets try to run it and see what happens.
+
+-------------------------------------------------------------------------------
+
+Strain3d-picoctf@webshell:~/drop-in$ python3 message.py 
+  File "/home/Strain3d-picoctf/drop-in/message.py", line 1
+    print("Hello, World!"
+         ^
+SyntaxError: '(' was never closed
+
+-------------------------------------------------------------------------------
+
+Actions:
+- Seems like someone edited the file and made an error. Lets find out who.
+- I check the git logs and try to find something suspicious.
+
+-------------------------------------------------------------------------------
+
+Strain3d-picoctf@webshell:~/drop-in$ git log
+
+commit 23e9d4ce78b3cea725992a0ce6f5eea0bf0bcdd4
+Author: picoCTF{@sk_th3_1nt3rn_81e716ff} <ops@picoctf.com>
+Date:   Tue Mar 12 00:07:15 2024 +0000
+
+    optimize file size of prod code
+
+-------------------------------------------------------------------------------
+
+Flag: picoCTF{@sk_th3_1nt3rn_81e716ff}
